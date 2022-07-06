@@ -8,50 +8,67 @@
     <link rel="stylesheet" href="style.css" >
     <title>ToDoList</title>
 </head>
-
 <body>
-    <section class="Title">
-        <h1>ToDo LIST</h1>
-    </section>
-    <section class="filters">
-        <li><a href="#">Filter status</a> </a>
+
+    <aside>
+
+
+        <setion class="todolist">
+            <div class="task_btn">
+                <img src="./img/random.svg" alt="Logo random">
+                <img src="./img/add.svg" alt="Logo plus">
+            </div>
+            <div class="task">
+                <article class="">
+                <input type="checkbox" name="checkbox" />
+                <div class="container">
+                    <div class="date">
+                        06 months
+                    </div>
+                    <div class="container_title">text</div>
+                    <img src="./img/burger.svg" alt="">
+                    <div></div>
+                    <div></div>
+                    
+                </div>
+                </article>
+            </div>
+        </setion>
+
+        </aside>
+
+    <main>
+
+        <section class="Title">
+            <h1 id="logo">ToDo LIST</h1>
+        </section>
+
+        <section class="filters">
         <ul>
-            <li><a href="#">To Do</a></li>
-            <li><a href="#">Doing</a></li>
-            <li><a href="#">Done</a></li>
-            <li><a href="#">All</a></li>            
+            <li class="filter padd"><a href="#">Filter status</a> 
+            <ul class="sous">
+                <li><a href="#">To Do</a></li>
+                <li><a href="#">Doing</a></li>
+                <li><a href="#">Done</a></li>
+                <li><a href="#">All</a></li>            
+            </ul>
+            </li>
+            <li class="filter padd"><a href="#">Priority</a> </a>
+                <ul class="sous">
+                    <li><a href="#">Highest</a></li>
+                    <li><a href="#">Critical</a></li>
+                    <li><a href="#">Alarming</a></li>
+                    <li><a href="#">Low</a></li>
+                    <li><a href="#">Lower</a></li>                          
+                </ul>
+            </li>
         </ul>
-        </li>
-        <li><a href="#">Priority</a> </a>
-            <ul>
-                <li><a href="#">Highest</a></li>
-                <li><a href="#">Critical</a></li>
-                <li><a href="#">Alarming</a></li>
-                <li><a href="#">Low</a></li>
-                <li><a href="#">Lower</a></li>                          
-            </ul>
-        </li>
-    </section>
-    <setion class="todolist">
-        <div>
-            <a class="randomTask" href="#"><img src="" alt="Logo random"></a>
-            <a class="addTask" href="#"><img src="" alt="Logo plus"></a>
-        </div>
-        <div class="task">
-            <article>
-            <input type="checkbox" name="checkbox" />
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>                          
-            </ul>
-            <button>x</button>
-            </article>
-        </div>
-    </setion>
+        </section>
+
+    </main>
+
+
     
-    <script src="index.js"></script>
+        <script src="index.js"></script>
 </body>
 </html>

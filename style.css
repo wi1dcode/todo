@@ -1,0 +1,164 @@
+/* *********************** HTML ***********************  */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+html {
+    height: 100%;
+    background: linear-gradient(316deg, #00BCD6, #150069, #a911ff);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:4% 0%}
+    50%{background-position:97% 100%}
+    100%{background-position:4% 0%}
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}   
+
+/* ***********************  MAIN  ************************** */
+
+
+#logo {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 120px;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+}
+
+main {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+
+aside {
+    margin-top: 50px;
+    width: 50%;
+}
+
+.filter {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+
+}
+
+.filters {
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: white; */
+    position: sticky;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+}
+
+
+.filters ul {
+    list-style-type: none;
+
+}
+
+.filters ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.filters a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+}
+
+.filters a:hover {
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+.sous {
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    /* background-color: white; */
+
+}
+
+.filters > ul li:hover .sous {
+    display: block;
+}
+
+.sous li {
+    float: none;
+    width: 100%;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+    font-size: 20px;
+    margin: 10px 10px 0 0;
+}
+
+.sous a {
+    padding: 10px;
+    border-bottom: none;
+}
+
+.sous a:hover {
+    border-bottom: none;
+}
+
+.filter > a::after {
+    content: " v";
+}
+
+.sous {
+    display: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+    position: absolute;
+    z-index: 1000;
+}
+
+.filters ul li {
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.padd {
+    margin-top: 20PX;
+}
+
+/* ***********************  TASK  ************************** */
+
+.task_btn {
+    cursor: pointer;
+}
+
