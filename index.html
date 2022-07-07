@@ -73,13 +73,14 @@
             <label for="name">To Do</label>
             <input type="text" name="toDo" id="toDo" required>
             <label for="name">Description</label>
-            <textarea class="textArea">...</textarea>
+            <textarea class="textArea">  ...</textarea>
         </article>
         <article class="taskInfo">
-            <p><span class="red red"></span><span class="red rose"></span><span class="red orange"></span><span class="red yellow"><span class="red green"></span></span></p>
-            
-        </article>
-        <article class="validation">
+            <div class="priorityBubble" >
+            <span class="red red"></span><span class="red rose"></span><span class="red orange"></span><span class="red orange"></span><span class="red yellow"><span class="red green"></span></span>
+            </div>
+            <input class="calendar" type="date" id="start" name="trip-start" value="2022-07-07" min="2022-01-01" max="2050-12-31">
+        <!-- <div></div> -->
             <input class="button" type="submit" value="APPLY">
         </article>
     </section>
