@@ -12,6 +12,7 @@ let clickDesc = document.getElementById('description')
 let openDesc = document.getElementById('open_desc')
 const btn = document.getElementById("addButton");
 const addForm = document.querySelector(".formulaireInput")
+const addForm2 = document.querySelector(".formulaireInput")
 
 // OPEN DESCRIPTION FOR TASK 
 
@@ -27,6 +28,12 @@ btn.addEventListener("click", () => {
         addForm.style.display = "flex"
     }
     // newForm.setAttribute("class", "formulaireInput display-yes")
-})
+    // let ignoreClickOnMeElement = document.querySelector(".formulaireInput")
+    // let isClickInsideElement = ignoreClickOnMeElement.contains(addForm.target);
+    // if (!isClickInsideElement) {
+    //     addForm.style.display = "none"
+    // }
+    
 
+})
 
