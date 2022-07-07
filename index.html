@@ -16,7 +16,7 @@
         <setion class="todolist">
             <div class="task_btn">
                 <img src="./img/random.svg" id="random" alt="Logo random">
-                <img src="./img/add.svg" alt="Logo plus">
+                <img id="addButton" src="./img/add.svg" alt="Logo plus">
             </div>
             <div class="task">
                 <article class="event">
@@ -43,6 +43,7 @@
 
         <section class="Title">
             <h1 id="logo">ToDo LIST</h1>
+            <img src="img/to.gif" alt="image todolist">
         </section>
 
         <section class="filters">
@@ -69,13 +70,13 @@
         </section>
 
     </main>
-    <section class="formulaireInput">
+    <section id="newForm" class="formulaireInput">
         <article class="taskAdd">
-            <form onsubmit="onTaskSubmit(); return false;"></form>
+            <form id="form" onsubmit="onTaskSubmit(); return false;"></form>
             <label for="name">To Do</label>
             <input type="text" name="toDo" id="toDo" required>
             <label for="name">Description</label>
-            <textarea class="textArea">  ...</textarea>
+            <textarea id="description" class="textArea">  ...</textarea>
         </article>
         <article class="taskInfo">
             <div class="priorityBubble" >
