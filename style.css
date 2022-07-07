@@ -134,7 +134,7 @@ aside {
 }
 
 .filter > a::after {
-    content: " ⮟";
+    content: " ▼";
 }
 
 .sous {
@@ -151,13 +151,14 @@ aside {
     float: left;
     text-align: center;
     position: relative;
+    margin-right: 40px;
 }
 
 .padd {
     margin-top: 20PX;
     color: rgba(255, 255, 255, 0.5);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 5  px;
+    padding: 5px;
 }
 
 .red {
@@ -229,6 +230,9 @@ aside {
 
 .event {
     width: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 /* *********************** Formulaire:  ************************/
