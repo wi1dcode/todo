@@ -15,7 +15,7 @@
 
         <setion class="todolist">
             <div class="task_btn">
-                <img src="./img/random.svg" alt="Logo random">
+                <img src="./img/random.svg" id="random" alt="Logo random">
                 <img src="./img/add.svg" alt="Logo plus">
             </div>
             <div class="task">
@@ -23,12 +23,14 @@
                 <input class="check" type="checkbox" name="checkbox" />
                 <div class="container">
                     <div class="date">
-                        06 months
+                        <span class="date_number">06</span>
+                        <span class="date_months">months</span>
                     </div>
                     <div class="container_title">text</div>
                     <img src="./img/burger.svg" alt="">
  
                 </div>
+                <img src="./img/close.svg" id="close" alt="close">
                 </article>
             </div>
         </setion>
@@ -65,7 +67,7 @@
         </section>
 
     </main>
-    <section class="formulaire">
+    <section class="formulaireInput">
         <article class="taskAdd">
             <form onsubmit="onTaskSubmit(); return false;"></form>
             <label for="name">To Do</label>
