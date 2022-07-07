@@ -157,6 +157,7 @@ aside {
     margin-top: 20PX;
     color: rgba(255, 255, 255, 0.5);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
 }
 
 .red {
@@ -188,6 +189,18 @@ aside {
 
 .task_btn {
     cursor: pointer;
+    margin-left: 444px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.task {
+    margin-left: 50px;
+}
+
+#random {
+    padding-top: 5px;
 }
 
 .container {
@@ -198,15 +211,47 @@ aside {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(4px);
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 18px;
+    padding: 0px 10px;
 }
 
 .check {
-    width: 64px;
+    width: 55px;
     height: 64px;
     opacity: 0.5;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-right: 5px;
 }
 
 .event {
-    width: 500px;
+    /* width: 500px; */
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+.formulaire {
+    display: none;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid white;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.date span {
+    padding-right: 10px;
+}
+
+#close {
+    padding-top: 8px;
+    margin-left: 5px;
 }
