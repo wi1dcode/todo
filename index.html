@@ -67,19 +67,20 @@
         </section>
 
     </main>
-    <section class="formulaire">
+    <section class="formulaireInput">
         <article class="taskAdd">
+            <form onsubmit="onTaskSubmit(); return false;"></form>
             <label for="name">To Do</label>
             <input type="text" name="toDo" id="toDo" required>
             <label for="name">Description</label>
-            <input type="text" name="description" id="todoDescription" required>
+            <textarea class="textArea">...</textarea>
         </article>
         <article class="taskInfo">
             <p><span class="red red"></span><span class="red rose"></span><span class="red orange"></span><span class="red yellow"><span class="red green"></span></span></p>
             
         </article>
         <article class="validation">
-            <input type="submit" value="Apply">
+            <input class="button" type="submit" value="APPLY">
         </article>
     </section>
 
