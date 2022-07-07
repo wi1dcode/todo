@@ -1,15 +1,3 @@
-let clickDesc = document.getElementById('description')
-let openDesc = document.getElementById('open_desc')
-
-
-openDesc.addEventListener('click', function(e) {
-  e.preventDefault()
-  clickDesc.classList.toggle('open')
-})
-
-
-
-
 // // Récuperation des données du formumaire
 // let dateControl = document.querySelector('input[type="date"]');
 // dateControl.value = '2022-06-01';
@@ -20,8 +8,19 @@ openDesc.addEventListener('click', function(e) {
 // let description = document.getElementById(description).value
 // let title = document.getElementById(toDo).value
 
+let clickDesc = document.getElementById('description')
+let openDesc = document.getElementById('open_desc')
 const btn = document.getElementById("addButton");
 const addForm = document.querySelector(".formulaireInput")
+
+// OPEN DESCRIPTION FOR TASK 
+
+openDesc.addEventListener('click', function(e) {
+  e.preventDefault()
+  clickDesc.classList.toggle('open')
+})
+
+// OPEN ADD TASK FORM 
 
 btn.addEventListener("click", () => {
     if (addForm.style.display != "flex") {   
