@@ -228,13 +228,13 @@ aside {
 }
 
 .event {
-<<<<<<< HEAD
     width: 500px;
 }
 
 /* Formulaire: */
 .formulaireInput {
     display: flex;
+    display: none;
     font-size: 100px;
     text-align: center;
     color: #FFFFFF;
@@ -267,7 +267,6 @@ aside {
     height: 73px;
     font-size: 40px;
 }
-=======
     /* width: 500px; */
     display: flex;
     flex-wrap: nowrap;
@@ -295,4 +294,3 @@ aside {
     padding-top: 8px;
     margin-left: 5px;
 }
->>>>>>> ff36ef8f97632d1871d9c34a051d4c108f2167a5
