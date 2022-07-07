@@ -190,3 +190,23 @@ aside {
     cursor: pointer;
 }
 
+.container {
+    width: 400px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.5);
+    border-left: 11px solid rgba(208, 3, 3, 0.6);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+}
+
+.check {
+    width: 64px;
+    height: 64px;
+    opacity: 0.5;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.event {
+    width: 500px;
+}
