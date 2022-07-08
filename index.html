@@ -70,12 +70,12 @@
         </section>
 
     </main>
-    <section id="newForm" class="formulaireInput">
+    <section class="formulaireInput">
         <article class="taskAdd">
-            <form id="form" onsubmit="onTaskSubmit(); return false;"></form>
-            <label for="name">To Do</label>
-            <input type="text" name="toDo" id="toDo" required>
-            <label for="name">Description</label>
+            <form id="form"></form>
+            <label for="name" id="label_name">To Do</label>
+            <input type="text" name="toDo" id="todo" required>
+            <label for="name" id="label_desc">Description</label>
             <textarea id="description" class="textArea">  ...</textarea>
         </article>
         <article class="taskInfo">
@@ -83,9 +83,9 @@
             <span class="red red"></span><span class="red rose"></span><span class="red orange"></span><span class="red orange"></span><span class="red yellow"><span class="red green"></span></span>
             </div>
             <input class="calendar" type="date" id="start" name="trip-start" value="2022-07-07" min="2022-01-01" max="2050-12-31">
-        <!-- <div></div> -->
             <input class="button" type="submit" value="APPLY">
         </article>
+        <img id="close" onclick="closeButton()" src="./img/close.svg" alt="close">
     </section>
 
 

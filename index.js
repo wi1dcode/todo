@@ -12,7 +12,9 @@ let clickDesc = document.getElementById('description')
 let openDesc = document.getElementById('open_desc')
 const btn = document.getElementById("addButton");
 const addForm = document.querySelector(".formulaireInput")
-const addForm2 = document.querySelector(".formulaireInput")
+const closeDesc = document.getElementById("close");
+
+
 
 // OPEN DESCRIPTION FOR TASK 
 
@@ -21,19 +23,18 @@ openDesc.addEventListener('click', function(e) {
   clickDesc.classList.toggle('open')
 })
 
-// OPEN ADD TASK FORM 
+// OPEN ADD TASK FORM AND CLOSE 2 CLICK IN BUTTON
 
-btn.addEventListener("click", () => {
-    if (addForm.style.display != "flex") {   
-        addForm.style.display = "flex"
-    }
-    // newForm.setAttribute("class", "formulaireInput display-yes")
-    // let ignoreClickOnMeElement = document.querySelector(".formulaireInput")
-    // let isClickInsideElement = ignoreClickOnMeElement.contains(addForm.target);
-    // if (!isClickInsideElement) {
-    //     addForm.style.display = "none"
-    // }
-    
-
+btn.addEventListener("click", function(event) {
+   if (addForm.getAttribute("id") != "open_form") {
+      addForm.setAttribute("id", "open_form");
+    } else {
+      addForm.removeAttribute("id", "open_form");
+    } 
 })
 
+// CLOSE ADD TASK FORM BUTTON
+
+function closeButton() {
+  addForm.removeAttribute("id", "open_form");
+}
