@@ -18,15 +18,15 @@
                 <img src="./img/random.svg" id="random" alt="Logo random">
                 <img id="addButton" src="./img/add.svg" alt="Logo plus">
             </div>
-            <div class="task">
+            <div id="newTask" class="task">
                 <article class="event">
-                <input class="check" type="checkbox" name="checkbox" />
+                <input id="checkStatus" class="check" type="checkbox" name="checkbox" />
                 <div class="container" id="open_desc">
-                    <div class="date">
+                    <div id="dateTask" class="date">
                         <span class="date_number">06</span>
                         <span class="date_months">months</span>
                     </div>
-                    <div class="container_title">text</div>
+                    <div id="taskName" class="container_title">text</div>
                     <img src="./img/burger.svg" alt="">
  
                 </div>
@@ -84,7 +84,7 @@
             </div>
             <input class="calendar" type="date" id="start" name="trip-start" value="2022-07-07" min="2022-01-01" max="2050-12-31">
         <!-- <div></div> -->
-            <input class="button" type="submit" value="APPLY">
+            <button id="form-button" class="button" type="submit" >APPLY</button>
         </article>
     </section>
 
