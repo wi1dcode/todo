@@ -15,7 +15,7 @@
 
         <setion class="todolist" id="list">
             <div class="task_btn">
-                <img src="./img/random.svg" id="random" alt="Logo random">
+                <img src="./img/random.svg" onclick="createTask()"   id="random" alt="Logo random">
                 <img id="addButton" src="./img/add.svg" alt="Logo plus">
             </div>
             <div id="newTask" class="task">
@@ -27,14 +27,16 @@
                         <span class="date_months">months</span>
                     </div>
                     <div id="taskName" class="container_title">text</div>
-                    <img src="./img/burger.svg" alt="">
+                    <img id="burger_padd" src="./img/burger.svg" alt="">
+ 
                 </div>
                 <img src="./img/close.svg" id="delete" onclick="deleteButton()" alt="delete">
                 </article>
             </div>
+            
             <div class="description" id="description"><span id="descr"> Lorem ipsum dolor sit amet.</span></div>
 
-        </setion>
+        </section>
 
     </aside>
 
@@ -58,11 +60,11 @@
             </li>
             <li class="filter padd"><a href="#">Priority</a> </a>
                 <ul class="sous">
-                    <li><a href="#"><span class="red red"></span>Highest</a></li>
-                    <li><a href="#"><span class="red rose"></span>Critical</a></li>
-                    <li><a href="#"><span class="red orange"></span>Alarming</a></li>
-                    <li><a href="#"><span class="red yellow"></span>Low</a></li>
-                    <li><a href="#"><span class="red green"></span>Lower</a></li>                          
+                    <li><a href="#"><span id="red" class="priority_color"></span>Highest</a></li>
+                    <li><a href="#"><span id="rose" class="priority_color"></span>Critical</a></li>
+                    <li><a href="#"><span id="orange" class="priority_color"></span>Alarming</a></li>
+                    <li><a href="#"><span id="yellow" class="priority_color"></span>Low</a></li>
+                    <li><a href="#"><span id="green" class="priority_color"></span>Lower</a></li>                          
                 </ul>
             </li>
         </ul>
@@ -79,7 +81,11 @@
         </article>
         <article class="taskInfo">
             <div class="priorityBubble" >
-            <span class="red red"></span><span class="red rose"></span><span class="red orange"></span><span class="red orange"></span><span class="red yellow"><span class="red green"></span></span>
+            <span id="red" onclick="redBorder()" class="get_color"></span>
+            <span id="rose" onclick="roseBorder()" class="get_color"></span>
+            <span id="orange" onclick="orangeBorder()" class="get_color"></span>
+            <span id="yellow" onclick="yellowBorder()" class="get_color"></span>
+            <span id="green" onclick="greenBorder()" class="get_color"></span>
             </div>
             <input class="calendar" type="date" id="start" name="trip-start" value="2022-07-07" min="2022-01-01" max="2050-12-31">
         <!-- <div></div> -->

@@ -13,8 +13,18 @@ let openDesc = document.getElementById('open_desc')
 const btn = document.getElementById("addButton");
 const addForm = document.querySelector(".formulaireInput")
 const closeDesc = document.getElementById("close");
+const randomTask = ['eat', 'sleep', 'code']
 
+// FUNCTION RANDOM TASK
 
+let min = 0;
+let max = randomTask.length - 1
+
+function randomInteger() {
+  random = Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+randomInteger()
 
 // OPEN DESCRIPTION FOR TASK 
 
@@ -32,6 +42,7 @@ btn.addEventListener("click", function(event) {
       addForm.removeAttribute("id", "open_form");
     } 
 })
+
 
 // CLOSE ADD TASK FORM BUTTON
 
@@ -73,3 +84,30 @@ todoDiv.appendChild(deleteButton);
 todoList.appendChild(todoDiv)
 todoInput.value = "";
 }
+
+function createTask() {
+  addRandom = document.querySelector(".task")
+  addRandom.innerHTML += 
+  `<article class="event">
+  <input class="check" type="checkbox" name="checkbox" />
+  <div class="container ${openDesc}" id="open_desc">
+      <div class="date">
+          <span class="date_number">06</span>
+          <span class="date_months">months</span>
+      </div>
+      <div class="container_title">${randomTask[random]}</div>
+      <img id="burger_padd" src="./img/burger.svg" alt="">
+  
+  </div>
+  <img src="./img/close.svg" id="close" alt="close">
+  </article>
+  `
+  
+  
+
+
+}
+
+
+
+
