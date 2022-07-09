@@ -13,7 +13,7 @@
 
     <aside>
 
-        <setion class="todolist">
+        <setion class="todolist" id="list">
             <div class="task_btn">
                 <img src="./img/random.svg" id="random" alt="Logo random">
                 <img id="addButton" src="./img/add.svg" alt="Logo plus">
@@ -28,16 +28,15 @@
                     </div>
                     <div id="taskName" class="container_title">text</div>
                     <img src="./img/burger.svg" alt="">
- 
                 </div>
-                <img src="./img/close.svg" id="close" alt="close">
+                <img src="./img/close.svg" id="delete" onclick="deleteButton()" alt="delete">
                 </article>
             </div>
             <div class="description" id="description"><span id="descr"> Lorem ipsum dolor sit amet.</span></div>
 
         </setion>
 
-        </aside>
+    </aside>
 
     <main>
 
@@ -70,12 +69,12 @@
         </section>
 
     </main>
-    <section id="newForm" class="formulaireInput">
+    <section class="formulaireInput">
         <article class="taskAdd">
-            <form id="form" onsubmit="onTaskSubmit(); return false;"></form>
-            <label for="name">To Do</label>
-            <input type="text" name="toDo" id="toDo" required>
-            <label for="name">Description</label>
+            <form id="form"></form>
+            <label for="name" id="label_name">To Do</label>
+            <input type="text" name="toDo" id="todo" required>
+            <label for="name" id="label_desc">Description</label>
             <textarea id="description" class="textArea">  ...</textarea>
         </article>
         <article class="taskInfo">
@@ -86,6 +85,7 @@
         <!-- <div></div> -->
             <button id="form-button" class="button" type="submit" >APPLY</button>
         </article>
+        <img id="close" onclick="closeButton()" src="./img/close.svg" alt="close">
     </section>
 
 

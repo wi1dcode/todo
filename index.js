@@ -12,81 +12,64 @@ let clickDesc = document.getElementById('description')
 let openDesc = document.getElementById('open_desc')
 const btn = document.getElementById("addButton");
 const addForm = document.querySelector(".formulaireInput")
-// const addForm2 = document.querySelector(".formulaireInput")
+const closeDesc = document.getElementById("close");
+
+
 
 // OPEN DESCRIPTION FOR TASK 
 
-// openDesc.addEventListener('click', function(e) {
-//   e.preventDefault()
-//   clickDesc.classList.toggle('open')
-// })
-
-// OPEN ADD TASK FORM 
-
-btn.addEventListener("click", () => {
-    if (addForm.style.display != "flex") {   
-        addForm.style.display = "flex"
-    }
-    // newForm.setAttribute("class", "formulaireInput display-yes")
-
+openDesc.addEventListener('click', function(e) {
+  e.preventDefault()
+  clickDesc.classList.toggle('open')
 })
-// $(document).click((event) => {
-//     if (!$(event.target).closest('#element').length) {
-//       // the click occured outside '#element'
-//     }        
-// });
-    // let ignoreClickOnMeElement = document.querySelector(".formulaireInput")
-    // let isClickInsideElement = ignoreClickOnMeElement.contains(addForm.target);
-    // if (!isClickInsideElement) {
-    //     newForm.setAttribute("class", "formulaireInput display-non")
-    // }
 
+// OPEN ADD TASK FORM AND CLOSE 2 CLICK IN BUTTON
 
+btn.addEventListener("click", function(event) {
+   if (addForm.getAttribute("id") != "open_form") {
+      addForm.setAttribute("id", "open_form");
+    } else {
+      addForm.removeAttribute("id", "open_form");
+    } 
+})
 
+// CLOSE ADD TASK FORM BUTTON
+
+function closeButton() {
+  addForm.removeAttribute("id", "open_form");
+}
+
+// NEW TASK ADD
 // Selecteurs
-const todoInput = document.getElementById("toDo")
+const todoInput = document.getElementById("todo")
 const todoButton = document.getElementById("form-button")
-const todoList = document.getElementById("newTask")
+const todoList = document.getElementById("list")
 
 // Ecouteurs
 todoButton.addEventListener("click", addToDo)
-todoList.addEventListener("click", deleteCheck);
 
 // Fonction
-function addToDo(event) {
-    event.preventDefault();
+function addToDo(events) {
+    events.preventDefault();
 // ToDo DIV
 const todoDiv = document.createElement("div");
 todoDiv.classList.add("newTask");
 // Creer le li
-const newTodo = document.createElement("li");
+const newTodo = document.createElement("div");
 newTodo.innerText = todoInput.value;
-newTodo.classList.add("todo-item");
+newTodo.classList.add("todo-title");
 todoDiv.appendChild(newTodo)
 // Bouton check
-const completedButton = document.createElement("button");
-completedButton.innerHTML = `<i class"fas fa-check"></i>`;
-completedButton.classList.add("complete-btn");
-todoDiv.appendChild(completedButton)
+const completedInput = document.createElement("input");
+completedInput.innerHTML = `<input id="checkStatus" class="check" type="checkbox" name="checkbox" />`;
+completedInput.classList.add("complete-input");
+todoDiv.appendChild(completedInput)
 // Bouton Supprimer
-const deleteButton = document.createElement("button");
-deleteButton.innerHTML =`<i class"fas fa-trash"></i>`;
+const deleteButton = document.createElement("delete");
+deleteButton.innerHTML =`<img src="./img/close.svg" id="delete" onclick="deleteButton()" alt="delete">`;
 deleteButton.classList.add("delete-btn");
 todoDiv.appendChild(deleteButton);
 // Ajouter notre todo à tododiv
 todoList.appendChild(todoDiv)
 todoInput.value = "";
 }
-
-// function deleteCheck(eve) {
-// const item = eve.target;
-//     if (item.classList[eve] === "delete-btn") {
-//         const todo = item.parentElement;
-//         todo.remove()
-//         // item.parentElement.remove();
-//     }
-//     if (item.classList[eve] === "complete-btn") {
-//         const todo = item.parentElement;
-//         todo.classList.toggle("completed")
-//     }
-// }
