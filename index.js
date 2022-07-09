@@ -1,12 +1,5 @@
 // // Récuperation des données du formumaire
-// let dateControl = document.querySelector('input[type="date"]');
-// dateControl.value = '2022-06-01';
-// console.log(dateControl.value)
-
-// let dayNumber = dateControl.value[3]
-// let month = dateControl.value[2]
 // let description = document.getElementById(description).value
-// let title = document.getElementById(toDo).value
 
 let clickDesc = document.getElementById('description')
 let openDesc = document.getElementById('open_desc')
@@ -50,41 +43,39 @@ function closeButton() {
   addForm.removeAttribute("id", "open_form");
 }
 
-// NEW TASK ADD
-// Selecteurs
+// // NEW TASK ADD
+// // Selecteurs
 const todoInput = document.getElementById("todo")
-const todoButton = document.getElementById("form-button")
-const todoList = document.getElementById("list")
+const todoButton = document.getElementById("formbutton")
+// const todoList = document.getElementById("list")
+let dateControl = document.querySelector('input[type="date"]');
+dateControl.value = '2022-06-01';
+let dayNumber = dateControl.value[3]
+let month = dateControl.value[2]
 
-// Ecouteurs
-todoButton.addEventListener("click", addToDo)
+// // Ecouteurs
+todoButton.addEventListener("click", createToDo)
 
-// Fonction
-function addToDo(events) {
-    events.preventDefault();
-// ToDo DIV
-const todoDiv = document.createElement("div");
-todoDiv.classList.add("newTask");
-// Creer le li
-const newTodo = document.createElement("div");
-newTodo.innerText = todoInput.value;
-newTodo.classList.add("todo-title");
-todoDiv.appendChild(newTodo)
-// Bouton check
-const completedInput = document.createElement("input");
-completedInput.innerHTML = `<input id="checkStatus" class="check" type="checkbox" name="checkbox" />`;
-completedInput.classList.add("complete-input");
-todoDiv.appendChild(completedInput)
-// Bouton Supprimer
-const deleteButton = document.createElement("delete");
-deleteButton.innerHTML =`<img src="./img/close.svg" id="delete" onclick="deleteButton()" alt="delete">`;
-deleteButton.classList.add("delete-btn");
-todoDiv.appendChild(deleteButton);
-// Ajouter notre todo à tododiv
-todoList.appendChild(todoDiv)
-todoInput.value = "";
+// // Fonction
+function createToDo() {
+    addnewTask = document.getElementById("newTask")
+addnewTask.innerHTML += 
+`<article class="event">
+<input class="check" type="checkbox" name="checkbox" />
+<div class="container ${openDesc}" id="open_desc">
+    <div class="date">
+        <span class="date_number">${dateControl.value[3]}</span>
+        <span class="date_months">${dateControl.value[2]}</span>
+    </div>
+    <div class="container_title">${todoInput.value}</div>
+    <img id="burger_padd" src="./img/burger.svg" alt="">
+</div>
+<img src="./img/close.svg" id="close" alt="close">
+</article>
+`
 }
 
+// Random TASK
 function createTask() {
   addRandom = document.querySelector(".task")
   addRandom.innerHTML += 
