@@ -161,29 +161,60 @@ aside {
     padding: 5px;
 }
 
-.red {
+.get_color, .priority_color {
     display: block;
-    background-color: #B9665E;
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    margin-right: 30px;
+    margin-right: 10px;
 }
 
-.rose {
+/* BORDER APRES QU'ON CLICK SUR COULEUR - APRES A FAIR */
+/* .red_active {
+    box-shadow: inset 0px 0px 0px 5px #9C0000;
+}
+
+#rose_active {
+    box-shadow: inset 0px 0px 0px 5px #9D3E6F;
+
+}
+
+#orange_active {
+    box-shadow: inset 0px 0px 0px 5px #A09D4E;
+}
+
+#yellow_active {
+    box-shadow: inset 0px 0px 0px 5px #ADCC79;
+}
+
+#green_active {
+    box-shadow: inset 0px 0px 0px 5px #3FBF5F;
+} */
+
+#rose {
     background-color: #D56493;
+    cursor: pointer;
 }
 
-.orange {
+#red {
+    background-color: #d00303;
+    cursor: pointer;
+}
+
+
+#orange {
     background-color: #C4C65C;
+    cursor: pointer;
     
 }
-.yellow {
+#yellow {
     background-color: #C7FC73;
+    cursor: pointer;
 }
 
-.green {
+#green {
     background-color: #55FB73;
+    cursor: pointer;
 }
 
 /* ***********************  TASK  ************************** */
@@ -236,6 +267,10 @@ aside {
     align-items: center;
 }
 
+#burger_padd {
+    padding-top: 10px;
+}
+
 /* *********************** Formulaire:  ************************/
 .formulaireInput {
     position: absolute;
@@ -278,8 +313,8 @@ aside {
     flex-direction: row;
 }
 .priorityBubble span {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 .taskInfo {
     display: flex;
