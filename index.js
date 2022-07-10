@@ -129,11 +129,12 @@ function greenTask() {
 //   alert('select color');
 // }
 
-
-// // Ecouteurs
 todoButton.addEventListener("click", createToDo)
 
+<<<<<<< HEAD
 // Fonction
+=======
+>>>>>>> 05deab7a778af9aad6cb12515496a3f3a3aea3d9
 function createToDo() {
     addnewTask = document.getElementById("newTask")
     addnewTask.innerHTML = addnewTask.innerHTML +
@@ -147,7 +148,7 @@ function createToDo() {
         <div class="container_title">${todoInput.value}</div>
         <img id="burger_padd" src="./img/burger.svg" alt="">
     </div>
-    <img src="./img/close.svg" id="close" alt="close">
+    <img src="./img/close.svg" id="delete" onclick="deleteButton()" alt="delete">
     </article>
     `
     
@@ -168,7 +169,7 @@ function createTask() {
       <img id="burger_padd" src="./img/burger.svg" alt="">
   
   </div>
-  <img src="./img/close.svg" id="close" alt="close">
+  <img src="./img/close.svg" id="delete" onclick="deleteButton()" alt="delete">
   </article>
   `
 }
@@ -198,3 +199,99 @@ changeStatus.addEventListener('click', () => {
   }
   changeStatus.src = statusImg[imageNumber];
 })
+// const changeStatus = document.getElementById("status")
+// function changeIm(changeStatus) {
+//   if (changeStatus.src.indexOf("/img/todo.png")) {
+//     changeStatus.src="/img/doing.png"
+//   } else if (changeStatus.src="/img/doing.png") {
+//     changeStatus.src="/img/todo.png"
+//   }
+// }
+
+// Button delete
+const deleteButton = document.getElementById("delete")
+deleteButton.addEventListener("click", deleteTask)
+
+function deleteTask() {
+  let element = document.getElementById("newTask")
+  element.remove()
+  }
+
+// Filters status
+const filterstatOption = document.getElementById("task-status")
+filterstatOption.addEventListener("input", filterStatus)
+
+function filterStatus(e) {
+  const taskStatus = todoList.childNodes
+  taskStatus.forEach(function (todo) {
+    switch (e.target.value) {
+      case "all":
+        todo.style.display = "flex"
+        break;
+      case "done":
+        if (todo.classList.contains("done")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+      case "to do":
+        if(!todo.classList.contains("done")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+    }
+  })
+}
+
+// Filtre priority
+const filterprioOption = document.getElementById("task-priority")
+filterprioOption.addEventListener("input", filterStatus)
+
+function filterPriority(e) {
+  const taskPriority = todoList.childNodes
+  taskPriority.forEach(function (todo) {
+    switch (e.target.value) {
+      case "all":
+        todo.style.display = "flex"
+        break;
+      case "highest":
+        if (todo.classList.contains("highest")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+      case "critical":
+        if(todo.classList.contains("critical")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+      case "alarming":
+        if(todo.classList.contains("alarming")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+      case "low":
+        if(todo.classList.contains("low")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+      case "lowest":
+        if(todo.classList.contains("lowest")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+    }
+  })
+}

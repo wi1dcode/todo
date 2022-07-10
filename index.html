@@ -57,7 +57,7 @@
         </section>
 
         <section class="filters">
-        <ul>
+        <!-- <ul>
             
             <li class="filter padd"><a href="#">Filter status</a> 
             <ul class="sous">
@@ -76,7 +76,22 @@
                     <li><a href="#"><span id="green" class="priority_color"></span>Lower</a></li>                          
                 </ul>
             </li>
-        </ul>
+        </ul> -->
+        <div class="select">
+            <select name="taskStatut" id="task-status" class="filterStatus">
+                <option value="all">All status</option>
+                <option value="done">Done</option>
+                <option value="to do">To Do</option>
+            </select>
+            <select name="taskPriority" id="task-priority" class="filterPriority">
+                <option value="all">All priority</option>
+                <option value="highest">Highest</option>
+                <option value="critical">Critical</option>
+                <option value="alarming">Alarming</option>
+                <option value="low">Low</option>
+                <option value="lowest"><span id="green" class="priority_color"></span>Lowest</option>                
+            </select>
+        </div>
         </section>
 
     </main>
