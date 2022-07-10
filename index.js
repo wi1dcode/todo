@@ -131,10 +131,10 @@ function greenTask() {
 
 todoButton.addEventListener("click", createToDo)
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 // Fonction
-=======
->>>>>>> 05deab7a778af9aad6cb12515496a3f3a3aea3d9
+// =======
+// >>>>>>> 05deab7a778af9aad6cb12515496a3f3a3aea3d9
 function createToDo() {
     addnewTask = document.getElementById("newTask")
     addnewTask.innerHTML = addnewTask.innerHTML +
@@ -174,22 +174,8 @@ function createTask() {
   `
 }
 
-
+// CHANGE IMAGE STATUS
 const changeStatus = document.getElementById("status")
-
-// changeStatus.addEventListener('click', () => {
-//   if (changeStatus.src = "/img/todo.png") {
-//     changeStatus.src = "/img/doing.png"
-//   } else if (changeStatus.src = "/img/doing.png") {
-//     changeStatus.src = "/img/done.png"
-//   } else {
-//     changeStatus.src = "/img/todo.png"
-//   }
-// })
-
-
-
-
 let imageNumber = "0";
 
 changeStatus.addEventListener('click', () => {
@@ -199,14 +185,6 @@ changeStatus.addEventListener('click', () => {
   }
   changeStatus.src = statusImg[imageNumber];
 })
-// const changeStatus = document.getElementById("status")
-// function changeIm(changeStatus) {
-//   if (changeStatus.src.indexOf("/img/todo.png")) {
-//     changeStatus.src="/img/doing.png"
-//   } else if (changeStatus.src="/img/doing.png") {
-//     changeStatus.src="/img/todo.png"
-//   }
-// }
 
 // Button delete
 const deleteButton = document.getElementById("delete")
