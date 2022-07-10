@@ -128,11 +128,8 @@ function greenTask() {
 //   alert('select color');
 // }
 
-
-// // Ecouteurs
 todoButton.addEventListener("click", createToDo)
 
-// // Fonction
 function createToDo() {
     addnewTask = document.getElementById("newTask")
     addnewTask.innerHTML = addnewTask.innerHTML +
@@ -146,7 +143,7 @@ function createToDo() {
         <div class="container_title">${todoInput.value}</div>
         <img id="burger_padd" src="./img/burger.svg" alt="">
     </div>
-    <img src="./img/close.svg" id="close" alt="close">
+    <img src="./img/close.svg" id="delete" onclick="deleteButton()" alt="delete">
     </article>
     `
     
@@ -167,12 +164,10 @@ function createTask() {
       <img id="burger_padd" src="./img/burger.svg" alt="">
   
   </div>
-  <img src="./img/close.svg" id="close" alt="close">
+  <img src="./img/close.svg" id="delete" onclick="deleteButton()" alt="delete">
   </article>
   `
 }
-
-
 
 // const changeStatus = document.getElementById("status")
 // function changeIm(changeStatus) {
@@ -182,3 +177,12 @@ function createTask() {
 //     changeStatus.src="/img/todo.png"
 //   }
 // }
+
+// Button delete
+const deleteButton = document.getElementById("delete")
+deleteButton.addEventListener("click", deleteTask)
+
+function deleteTask() {
+  let element = document.getElementById("newTask")
+  element.remove()
+  }
