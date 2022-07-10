@@ -97,6 +97,7 @@ if (month == 12) {
 // // NEW TASK ADD
 // // Selecteurs
 const todoInput = document.getElementById("todo")
+const descInput = document.getElementById("descr")
 const todoButton = document.getElementById("formbutton")
 const todoList = document.getElementById("list")
 let dateControl = document.querySelector('input[type="date"]');
@@ -132,7 +133,7 @@ function greenTask() {
 // // Ecouteurs
 todoButton.addEventListener("click", createToDo)
 
-// // Fonction
+// Fonction
 function createToDo() {
     addnewTask = document.getElementById("newTask")
     addnewTask.innerHTML = addnewTask.innerHTML +
@@ -173,12 +174,27 @@ function createTask() {
 }
 
 
+const changeStatus = document.getElementById("status")
 
-// const changeStatus = document.getElementById("status")
-// function changeIm(changeStatus) {
-//   if (changeStatus.src.indexOf("/img/todo.png")) {
-//     changeStatus.src="/img/doing.png"
-//   } else if (changeStatus.src="/img/doing.png") {
-//     changeStatus.src="/img/todo.png"
+// changeStatus.addEventListener('click', () => {
+//   if (changeStatus.src = "/img/todo.png") {
+//     changeStatus.src = "/img/doing.png"
+//   } else if (changeStatus.src = "/img/doing.png") {
+//     changeStatus.src = "/img/done.png"
+//   } else {
+//     changeStatus.src = "/img/todo.png"
 //   }
-// }
+// })
+
+
+
+
+let imageNumber = "0";
+
+changeStatus.addEventListener('click', () => {
+  imageNumber++;
+  if(imageNumber == statusImg.length) {
+    imageNumber="0";
+  }
+  changeStatus.src = statusImg[imageNumber];
+})
