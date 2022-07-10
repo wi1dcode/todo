@@ -20,13 +20,14 @@
             </div>
             <div id="newTask" class="task">
                 <article class="event">
-                <input id="checkStatus" class="check" type="checkbox" name="checkbox" />
+                <!-- <input id="checkStatus" class="check" type="checkbox" name="checkbox" /> -->
+                <img src="./img/todo.png" alt="To Do" id="status">
                 <div class="container" id="open_desc">
                     <div id="dateTask" class="date">
                         <span class="date_number">11</span>
                         <span class="date_months">July</span>
                     </div>
-                    <div id="taskName" class="container_title">text</div>
+                    <div id="taskName" class="container_title">Welcome</div>
                     <img id="burger_padd" src="./img/burger.svg" alt="">
  
                 </div>
@@ -44,7 +45,16 @@
 
         <section class="Title">
             <h1 id="logo">ToDo LIST</h1>
-            <img src="img/to.gif" alt="image todolist" width="350px">
+            <!-- <img src="./img/info.png" alt="info"> -->
+            <div class="info_container">
+                <article><img src="./img/todo.png" alt="todo logo" width="50px">TO DO</article>
+                <article><img src="./img/doing.png" alt="doing logo" width="50px">DOING</article>
+                <article><img src="./img/done.png" alt="done logo" width="50px">DONE</article>
+            </div>
+            <div class="background_logo">
+                <img src="img/to.gif" alt="image todolist" width="350px">
+            </div>
+            
         </section>
 
         <section class="filters">
@@ -77,9 +87,10 @@
             <label for="name" id="label_name">To Do</label>
             <input type="text" name="toDo" id="todo" required>
             <label for="name" id="label_desc">Description</label>
-            <textarea id="description" class="textArea">  ...</textarea>
+            <textarea id="description" class="textArea"></textarea>
         </article>
         <article class="taskInfo">
+            <h3 class="priority_text">priority</h3>
             <div class="priorityBubble" >
             <span id="red" onclick="redTask()" class="get_color"></span>
             <span id="rose" onclick="roseTask()" class="get_color"></span>

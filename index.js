@@ -7,7 +7,7 @@ const btn = document.getElementById("addButton");
 const addForm = document.querySelector(".formulaireInput")
 const closeDesc = document.getElementById("close");
 const randomTask = ['eat', 'sleep', 'code']
-const cont = document.querySelector(".container")
+const status = document.getElementById("close");
 
 // FUNCTION RANDOM TASK
 
@@ -42,12 +42,6 @@ btn.addEventListener("click", function(event) {
 
 function closeButton() {
   addForm.removeAttribute("id", "open_form");
-}
-
-
-const eventTask = document.querySelector(".container")
-function roseTask() {
-  let createRose = eventTask.setAttribute("class", "container task_rose");
 }
 
 
@@ -107,6 +101,7 @@ let dateControl = document.querySelector('input[type="date"]');
 
 
 // CHANGE PRIORITY COLOR
+
 function redTask() {
   color = 'task_red'
 }
@@ -123,6 +118,10 @@ function greenTask() {
   color = 'task_green'
 }
 
+// TO FIX AFTER
+// if(typeof color !==  "undefined") {
+//   alert('select color');
+// }
 
 
 // // Ecouteurs
@@ -131,9 +130,9 @@ todoButton.addEventListener("click", createToDo)
 // // Fonction
 function createToDo() {
     addnewTask = document.getElementById("newTask")
-    addnewTask.innerHTML += 
+    addnewTask.innerHTML = addnewTask.innerHTML +
     `<article class="event">
-    <input class="check" type="checkbox" name="checkbox" />
+    <img src="./img/todo.png" alt="To Do" id="status">
     <div class="container ${color}" id="open_desc">
         <div class="date">
             <span class="date_number">${day}</span>
@@ -145,14 +144,15 @@ function createToDo() {
     <img src="./img/close.svg" id="close" alt="close">
     </article>
     `
+    
 }
 
 // Random TASK
 function createTask() {
   addRandom = document.querySelector(".task")
-  addRandom.innerHTML += 
+  addRandom.innerHTML = addRandom.innerHTML +
   `<article class="event">
-  <input class="check" type="checkbox" name="checkbox" />
+  <img src="./img/todo.png" alt="To Do" id="status">
   <div class="container" id="open_desc">
       <div class="date">
           <span class="date_number">${day}</span>
@@ -166,6 +166,8 @@ function createTask() {
   </article>
   `
 }
+
+
 
 
 

@@ -43,6 +43,29 @@ body {
     backdrop-filter: blur(4px);
 }
 
+.info_container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+
+.info_container article {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    font-size: 25px;
+}
+
+.info_container article img {
+    padding-right: 10px;
+}
+
+.background_logo {
+    text-align: center;
+}
+
 main {
     margin-top: 50px;
     display: flex;
@@ -170,26 +193,31 @@ aside {
 }
 
 /* BORDER APRES QU'ON CLICK SUR COULEUR - APRES A FAIR */
-/* .red_active {
-    box-shadow: inset 0px 0px 0px 5px #9C0000;
+
+#red:active {
+    /* box-shadow: inset 0px 0px 0px 5px #9C0000; */
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
-#rose_active {
-    box-shadow: inset 0px 0px 0px 5px #9D3E6F;
-
+#rose:active {
+    /* box-shadow: inset 0px 0px 0px 5px #9D3E6F; */
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
-#orange_active {
-    box-shadow: inset 0px 0px 0px 5px #A09D4E;
+#orange:active {
+    /* box-shadow: inset 0px 0px 0px 5px #A09D4E; */
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
-#yellow_active {
-    box-shadow: inset 0px 0px 0px 5px #ADCC79;
+#yellow:active {
+    /* box-shadow: inset 0px 0px 0px 5px #ADCC79; */
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
-#green_active {
-    box-shadow: inset 0px 0px 0px 5px #3FBF5F;
-} */
+#green:active {
+    /* box-shadow: inset 0px 0px 0px 5px #3FBF5F; */
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
 
 #rose {
     background-color: #D56493;
@@ -268,19 +296,20 @@ aside {
     border-left: 11px solid rgba(20, 255, 0, 0.5);
 }
 
-.check {
+/* .check {
     width: 55px;
     height: 64px;
     opacity: 0.5;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-right: 5px;
-}
+} */
 
 .event {
     width: 500px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 #burger_padd {
@@ -290,7 +319,16 @@ aside {
 #delete {
     padding-top: 10px;
     cursor: pointer;
+    padding-left: 5px;
 }
+
+#status {
+    width: 45px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+
 
 /* *********************** Formulaire:  ************************/
 .formulaireInput {
@@ -315,13 +353,14 @@ aside {
     text-transform: uppercase;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-weight: bold;
+    font-size: 80px;
     padding: 10px 0px;
 }
 
 .taskAdd {
     display: flex;
     flex-direction: column;
-    padding-right: 80px;
+    padding-right: 100px;
 }
 .taskAdd input {
     background: rgba(255, 255, 255, 0.3);
@@ -457,3 +496,8 @@ aside {
   transform:scaleY(1);
 }
 
+.priority_text {
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
