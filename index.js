@@ -43,15 +43,66 @@ function closeButton() {
   addForm.removeAttribute("id", "open_form");
 }
 
+
+const eventTask = document.querySelector(".container")
+function roseTask() {
+  let createRose = eventTask.setAttribute("class", "container task_rose");
+}
+
+
+// DATE REAL TIME (LOCAL)
+let month = new Date().toLocaleDateString().slice(3,-5);
+console.log(month);
+let day = new Date().toLocaleDateString().slice(0,-8);
+console.log(day);
+
+if (month == 01) {
+  month = 'Jan'
+}
+if (month == 02) {
+  month = 'Feb'
+}
+if (month == 03) {
+  month = 'Mar'
+}
+if (month == 04) {
+  month = 'Apr'
+}
+if (month == 05) {
+  month = 'May'
+}
+if (month == 06) {
+  month = 'June'
+}
+if (month == 07) {
+  month = 'July'
+}
+if (month == 08) {
+  month = 'Aug'
+}
+if (month == 09) {
+  month = 'Sep'
+}
+if (month == 10) {
+  month = 'Oct'
+}
+if (month == 11) {
+  month = 'Nov'
+}
+if (month == 12) {
+  month = 'Dec'
+}
+
+
 // // NEW TASK ADD
 // // Selecteurs
 const todoInput = document.getElementById("todo")
 const todoButton = document.getElementById("formbutton")
-// const todoList = document.getElementById("list")
+const todoList = document.getElementById("list")
 let dateControl = document.querySelector('input[type="date"]');
-dateControl.value = '2022-06-01';
-let dayNumber = dateControl.value[3]
-let month = dateControl.value[2]
+// dateControl.value = '2022-06-01';
+// let dayNumber = dateControl.value[3]
+// let monthNumber = dateControl.value[2]
 
 // // Ecouteurs
 todoButton.addEventListener("click", createToDo)
@@ -59,20 +110,20 @@ todoButton.addEventListener("click", createToDo)
 // // Fonction
 function createToDo() {
     addnewTask = document.getElementById("newTask")
-addnewTask.innerHTML += 
-`<article class="event">
-<input class="check" type="checkbox" name="checkbox" />
-<div class="container ${openDesc}" id="open_desc">
-    <div class="date">
-        <span class="date_number">${dateControl.value[3]}</span>
-        <span class="date_months">${dateControl.value[2]}</span>
+    addnewTask.innerHTML += 
+    `<article class="event">
+    <input class="check" type="checkbox" name="checkbox" />
+    <div class="container" id="open_desc">
+        <div class="date">
+            <span class="date_number">${day}</span>
+            <span class="date_months">${month}</span>
+        </div>
+        <div class="container_title">${todoInput.value}</div>
+        <img id="burger_padd" src="./img/burger.svg" alt="">
     </div>
-    <div class="container_title">${todoInput.value}</div>
-    <img id="burger_padd" src="./img/burger.svg" alt="">
-</div>
-<img src="./img/close.svg" id="close" alt="close">
-</article>
-`
+    <img src="./img/close.svg" id="close" alt="close">
+    </article>
+    `
 }
 
 // Random TASK
@@ -81,10 +132,10 @@ function createTask() {
   addRandom.innerHTML += 
   `<article class="event">
   <input class="check" type="checkbox" name="checkbox" />
-  <div class="container ${openDesc}" id="open_desc">
+  <div class="container" id="open_desc">
       <div class="date">
-          <span class="date_number">06</span>
-          <span class="date_months">months</span>
+          <span class="date_number">${day}</span>
+          <span class="date_months">${month}</span>
       </div>
       <div class="container_title">${randomTask[random]}</div>
       <img id="burger_padd" src="./img/burger.svg" alt="">
@@ -93,10 +144,6 @@ function createTask() {
   <img src="./img/close.svg" id="close" alt="close">
   </article>
   `
-  
-  
-
-
 }
 
 

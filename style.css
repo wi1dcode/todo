@@ -252,6 +252,22 @@ aside {
     cursor: pointer;
 }
 
+.task_rose {
+    border-left: 11px solid rgba(255, 0, 92, 0.6);
+}
+
+.task_orange {
+    border-left: 11px solid rgba(227, 164, 0, 0.6);
+}
+
+.task_yellow {
+    border-left: 11px solid rgba(250, 255, 0, 0.5);
+}
+
+.task_green {
+    border-left: 11px solid rgba(20, 255, 0, 0.5);
+}
+
 .check {
     width: 55px;
     height: 64px;
@@ -269,6 +285,11 @@ aside {
 
 #burger_padd {
     padding-top: 10px;
+}
+
+#delete {
+    padding-top: 10px;
+    cursor: pointer;
 }
 
 /* *********************** Formulaire:  ************************/
