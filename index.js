@@ -7,6 +7,7 @@ const btn = document.getElementById("addButton");
 const addForm = document.querySelector(".formulaireInput")
 const closeDesc = document.getElementById("close");
 const randomTask = ['eat', 'sleep', 'code']
+const cont = document.querySelector(".container")
 
 // FUNCTION RANDOM TASK
 
@@ -104,6 +105,26 @@ let dateControl = document.querySelector('input[type="date"]');
 // let dayNumber = dateControl.value[3]
 // let monthNumber = dateControl.value[2]
 
+
+// CHANGE PRIORITY COLOR
+function redTask() {
+  color = 'task_red'
+}
+function roseTask() {
+  color = 'task_rose'
+}
+function orangeTask() {
+  color = 'task_orange'
+}
+function yellowTask() {
+  color = 'task_yellow'
+}
+function greenTask() {
+  color = 'task_green'
+}
+
+
+
 // // Ecouteurs
 todoButton.addEventListener("click", createToDo)
 
@@ -113,7 +134,7 @@ function createToDo() {
     addnewTask.innerHTML += 
     `<article class="event">
     <input class="check" type="checkbox" name="checkbox" />
-    <div class="container" id="open_desc">
+    <div class="container ${color}" id="open_desc">
         <div class="date">
             <span class="date_number">${day}</span>
             <span class="date_months">${month}</span>
