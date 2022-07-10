@@ -10,7 +10,7 @@ const randomTask = ['eat', 'sleep', 'code']
 const status = document.getElementById("close");
 
 // RANDOM STATUS IMAGE FOR RANDOM TASK
-const statusImg = [ "/img/todo.png", "/img/doing.png", "/img/done.png"];
+const statusImg = [ "./img/todo.png", "./img/doing.png", "./img/done.png"];
 let iImage = Math.floor(Math.random() * 3)
 
 
