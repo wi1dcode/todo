@@ -9,6 +9,11 @@ const closeDesc = document.getElementById("close");
 const randomTask = ['eat', 'sleep', 'code']
 const status = document.getElementById("close");
 
+// RANDOM STATUS IMAGE FOR RANDOM TASK
+const statusImg = [ "/img/todo.png", "/img/doing.png", "/img/done.png"];
+let iImage = Math.floor(Math.random() * 3)
+
+
 // FUNCTION RANDOM TASK
 
 let min = 0;
@@ -152,7 +157,7 @@ function createTask() {
   addRandom = document.querySelector(".task")
   addRandom.innerHTML = addRandom.innerHTML +
   `<article class="event">
-  <img src="./img/todo.png" alt="To Do" id="status">
+  <img src="${statusImg[iImage]}" alt="To Do" id="status">
   <div class="container" id="open_desc">
       <div class="date">
           <span class="date_number">${day}</span>
@@ -169,6 +174,11 @@ function createTask() {
 
 
 
-
-
-
+// const changeStatus = document.getElementById("status")
+// function changeIm(changeStatus) {
+//   if (changeStatus.src.indexOf("/img/todo.png")) {
+//     changeStatus.src="/img/doing.png"
+//   } else if (changeStatus.src="/img/doing.png") {
+//     changeStatus.src="/img/todo.png"
+//   }
+// }
