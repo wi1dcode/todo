@@ -186,3 +186,82 @@ function deleteTask() {
   let element = document.getElementById("newTask")
   element.remove()
   }
+
+// Filters status
+const filterstatOption = document.getElementById("task-status")
+filterstatOption.addEventListener("input", filterStatus)
+
+function filterStatus(e) {
+  const taskStatus = todoList.childNodes
+  taskStatus.forEach(function (todo) {
+    switch (e.target.value) {
+      case "all":
+        todo.style.display = "flex"
+        break;
+      case "done":
+        if (todo.classList.contains("done")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+      case "to do":
+        if(!todo.classList.contains("done")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+    }
+  })
+}
+
+// Filtre priority
+const filterprioOption = document.getElementById("task-priority")
+filterprioOption.addEventListener("input", filterStatus)
+
+function filterPriority(e) {
+  const taskPriority = todoList.childNodes
+  taskPriority.forEach(function (todo) {
+    switch (e.target.value) {
+      case "all":
+        todo.style.display = "flex"
+        break;
+      case "highest":
+        if (todo.classList.contains("highest")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+      case "critical":
+        if(todo.classList.contains("critical")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+      case "alarming":
+        if(todo.classList.contains("alarming")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+      case "low":
+        if(todo.classList.contains("low")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+      case "lowest":
+        if(todo.classList.contains("lowest")) {
+          todo.style.display = "flex"
+        } else {
+          todo.style.display = "none"
+        }
+        break;
+    }
+  })
+}
